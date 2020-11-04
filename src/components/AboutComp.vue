@@ -8,7 +8,7 @@
               <button class="btn btn-link btn-block text-left" type="button"
                 data-toggle="collapse"
                 data-target="#collapseOne"
-                aria-expanded="true"
+                aria-expanded="false"
                 aria-controls="collapseOne"
               >
                 About NYSL
@@ -17,7 +17,7 @@
           </div>
           <div
             id="collapseOne"
-            class="collapse show"
+            class="collapse "
             aria-labelledby="headingOne"
             data-parent="#accordionExample"
             

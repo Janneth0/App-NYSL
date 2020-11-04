@@ -22,6 +22,9 @@ export default {
 .about{
   margin-bottom: 10%;
 }
+body{
+  background-color: aqua;
+}
 </style>
 
 

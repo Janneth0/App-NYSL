@@ -1,45 +1,34 @@
-<template>
+"<template>
   <div id="app">
     <div id="header">
       <nav class="navbar navbar-expand-sm navbar-dark bg-dark col-sm-12">
-        <router-link to="/">HOME</router-link>
+        <router-link to="/">
+        <img src="./assets/nysl_logo.png" alt="logo-nysl" id="logo">
+        </router-link>
         <!-- Logo-->
-        <h2>NYSL</h2>
+        <h2 id="titulo">NYSL</h2>
         <!--TITULO-->
-
-        <div class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <span class="navbar-toggler-icon"></span>
-          Dropdown
-        </a>
-          <!-- <button
+        <div class="btn-group" role="group" id="menu">
+          <button
+            id="btnGroupDrop1"
             type="button"
-            class="btn btn-default dropdown-toggle"
+            class="btn btn-secondary dropdown-toggle"
             data-toggle="dropdown"
-          ><span class="navbar-toggler-icon"></span>
-          </button> -->
-
-          <ul class="dropdown-menu" role="menu">
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
             <router-link class="dropdown-item" to="/register"
-                >REGISTRATION</router-link
-              >
-              <router-link class="dropdown-item" to="/rules">RULES</router-link>
-          </ul>
-        </div>
-
-       
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-            <li class="nav-item dropdown">
-              <router-link class="dropdown-item" to="/register"
-                >REGISTRATION</router-link
-              >
-              <router-link class="dropdown-item" to="/rules">RULES</router-link>
-            </li>
-          </ul>
+              >REGISTRATION</router-link
+            >
+            <router-link class="dropdown-item" to="/rules">RULES</router-link>
+          </div>
         </div>
       </nav>
     </div>
+    
     <!-- -------------------------- -->
 
     <!-- <h2>HOLA TITULO2</h2> -->
@@ -84,7 +73,8 @@ i {
   // position: fixed;
   // top: 90vh;
   background: red;
-  height: 10vh;
+  text-align: center;
+  height: 9vh;
   padding: 10px;
 
   a {
@@ -98,16 +88,11 @@ i {
     background-color: brown;
   }
 }
-#header > button {
-  color: aliceblue;
-}
 #header {
   position: fixed;
-  top: 0;
+  top: 0vh;
   color: beige;
-  z-index: 10;
-  height: 11vh;
-  padding: 10px;
+  z-index: 19;
 
   a {
     font-weight: bold;
@@ -122,9 +107,9 @@ i {
 h1 {
   position: fixed;
   font-size: 25px;
-  padding: 2vh;
+  padding: 10px;
   text-align: center;
-  top: 11vh;
+  top: 13vh;
   background-color: hotpink;
 }
 h2 {
@@ -134,11 +119,35 @@ h2 {
   //Esto es la posicion del cuerpo pegar en todos los VIEW
   position: fixed;
   overflow-y: scroll;
-
+  width: 100vw;
   background-color: greenyellow;
-  top: 20vh;
-  padding: 10%;
+  top: 21vh;
   height: 70vh;
+  padding: 10px;
+}
+#logo{
+  height: 13vh;
+  position: absolute;
+  top: 0;
+  padding: 10px;
+
+}
+.navbar{
+  padding: 3vh;
+}
+#titulo{
+  width: 100vw;
+}
+#menu{
+  position: absolute;
   padding: 20px;
+  width: 5vw;
+margin: 0 0 0 75vw;
+  z-index: 23;
+}
+.dropdown-menu {
+   margin: 0px 10px 50px 0px!important;
+    left: -20vw;
+    float:right;
 }
 </style>
