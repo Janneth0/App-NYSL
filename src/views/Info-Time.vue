@@ -1,6 +1,6 @@
 <template>
   <div class="info-time">
-   <InfoTimeComp msg="GAME INFORMATION"/>
+   <InfoTimeComp msg="GAME INFORMATION"/><!--lUEGO VER COMO CAMBIARLO POR TITLE-->
   </div>
 </template>
 

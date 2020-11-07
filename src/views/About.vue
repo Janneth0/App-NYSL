@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-   <AboutComp msg="INFORMATION"/>
+   <AboutComp msg="INFORMATION"/><!--lUEGO VER COMO CAMBIARLO POR TITLE-->
    <!-- <img alt="Vue logo" src="assets/logo.png"> -->
     <!-- <HelloWorld msg="Welcoyyme to Your Vue.js App janni"/> -->
   </div>

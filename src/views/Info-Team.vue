@@ -1,19 +1,24 @@
 <template>
   <div class="info-team">
-   <InfoTeamComp msg="GAME INFORMATION"/>
+    <InfoTeamComp
+      msg="GAME INFORMATION"
+    /><!--lUEGO VER COMO CAMBIARLO POR TITLE-->
+    {{Games}}
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import InfoTeamComp from '@/components/InfoTeamComp.vue'
+import InfoTeamComp from "@/components/InfoTeamComp.vue";
 
 export default {
-  name: 'Info-Team',
+  // name: "GameInfo",
+ 
+  name: "Info-Team",
   components: {
-   InfoTeamComp
-  }
-}
+    InfoTeamComp,
+  },
+};
 </script>
 
 

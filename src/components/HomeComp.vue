@@ -1,4 +1,5 @@
 <template>
+<!-- PARTE IMPORTANTE -->
   <div class="bodycontent">
     <h1>{{ msg }}</h1>
     <div id="upcoming">

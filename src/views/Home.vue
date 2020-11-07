@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-   <HomeComp msg="UPCOMING EVENTS"/>
+   <HomeComp msg="UPCOMING EVENTS"/><!--lUEGO VER COMO CAMBIARLO POR TITLE-->
    <!-- <img alt="Vue logo" src="assets/logo.png"> -->
     <!-- <HelloWorld msg="Welcoyyme to Your Vue.js App janni"/> -->
   </div>

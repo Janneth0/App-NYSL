@@ -1,7 +1,9 @@
 <template>
   <div class="rules">
-   <RulesComp msg="Rules"/>
+   <RulesComp msg="Rules"/><!--lUEGO VER COMO CAMBIARLO POR TITLE-->
+   
   </div>
+  
 </template>
 
 <script>

@@ -1,6 +1,6 @@
 <template>
   <div class="register">
-   <RegisterComp msg="REGISTER"/>
+   <RegisterComp msg="REGISTER"/><!--lUEGO VER COMO CAMBIARLO POR TITLE-->
   </div>
 </template>
 

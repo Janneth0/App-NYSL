@@ -1,53 +1,24 @@
-"<template>
+<template>
   <div id="app">
-    <div id="header">
-      <nav class="navbar navbar-expand-sm navbar-dark bg-dark col-sm-12">
-        <router-link to="/">
-        <img src="./assets/nysl_logo.png" alt="logo-nysl" id="logo">
-        </router-link>
-        <!-- Logo-->
-        <h2 id="titulo">NYSL</h2>
-        <!--TITULO-->
-        <div class="btn-group" role="group" id="menu">
-          <button
-            id="btnGroupDrop1"
-            type="button"
-            class="btn btn-secondary dropdown-toggle"
-            data-toggle="dropdown"
-            aria-haspopup="true"
-            aria-expanded="false"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-            <router-link class="dropdown-item" to="/register"
-              >REGISTRATION</router-link
-            >
-            <router-link class="dropdown-item" to="/rules">RULES</router-link>
-          </div>
-        </div>
-      </nav>
-    </div>
-    
-    <!-- -------------------------- -->
-
-    <!-- <h2>HOLA TITULO2</h2> -->
-    <div id="nav" class="fixed-bottom">
-      <router-link to="/info-team"><i class="fas fa-users"></i></router-link> |
-      <router-link to="/info-time"
-        ><i class="far fa-calendar-alt"></i
-      ></router-link>
-      |
-      <router-link to="/location"
-        ><i class="fas fa-map-marked-alt"></i
-      ></router-link>
-      |
-      <router-link to="/about"><i class="fas fa-info-circle"></i></router-link>
-    </div>
-    <router-view />
+    <Header />
+    <div class="main-view"><router-view /></div>
+    <Nav />
   </div>
 </template>
 
+<script>
+// @ is an alias to /src
+
+import Header from "@/components/Header.vue";
+import Nav from "@/components/Nav.vue";
+
+export default {
+  components: {
+    Header,
+    Nav,
+  }
+};
+</script>
 
 
 
@@ -92,7 +63,7 @@ i {
   position: fixed;
   top: 0vh;
   color: beige;
-  z-index: 19;
+  z-index: 999;
 
   a {
     font-weight: bold;
@@ -125,29 +96,28 @@ h2 {
   height: 70vh;
   padding: 10px;
 }
-#logo{
+#logo {
   height: 13vh;
   position: absolute;
   top: 0;
   padding: 10px;
-
 }
-.navbar{
+.navbar {
   padding: 3vh;
 }
-#titulo{
+#titulo {
   width: 100vw;
 }
-#menu{
+#menu {
   position: absolute;
   padding: 20px;
   width: 5vw;
-margin: 0 0 0 75vw;
+  margin: 0 0 0 75vw;
   z-index: 23;
 }
 .dropdown-menu {
-   margin: 0px 10px 50px 0px!important;
-    left: -20vw;
-    float:right;
+  margin: 0px 10px 50px 0px !important;
+  left: -20vw;
+  float: right;
 }
 </style>

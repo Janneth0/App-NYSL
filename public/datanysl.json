@@ -7,7 +7,8 @@
             "day": 1,
             "mounth": 9,
             "time": "9:30 am",
-            "location": "AJ Katzenmaier"
+            "location": "AJ Katzenmaier",
+            "id_loc": "a"
         },
         {
             "id": "0002",
@@ -16,7 +17,8 @@
             "day": 1,
             "mounth": 9,
             "time": "1:00 pm",
-            "location": "Greenbay"
+            "location": "Greenbay",
+            "id_loc": "b"
         },
         {
             "id": "0003",
@@ -25,7 +27,8 @@
             "day": 8,
             "mounth": 9,
             "time": "9:30 am",
-            "location": "Howard A Yeager"
+            "location": "Howard A Yeager",
+            "id_loc": "c"
         },
         {
             "id": "0004",
@@ -34,7 +37,8 @@
             "day": 8,
             "mounth": 9,
             "time": "1:00 pm",
-            "location": "Marjorie P Hart"
+            "location": "Marjorie P Hart",
+            "id_loc": "d"
         },
         {
             "id": "0005",
@@ -43,7 +47,8 @@
             "day": 15,
             "mounth": 9,
             "time": "9:30 am",
-            "location": "North"
+            "location": "North",
+            "id_loc": "e"
         },
         {
             "id": "0006",
@@ -52,7 +57,8 @@
             "day": 15,
             "mounth": 9,
             "time": "1:00 pm",
-            "location": "AJ Katzenmaier"
+            "location": "AJ Katzenmaier",
+            "id_loc": "a"
         },
         {
             "id": "0007",
@@ -61,7 +67,8 @@
             "day": 22,
             "mounth": 9,
             "time": "9:30 am",
-            "location": "South"
+            "location": "South",
+            "id_loc": "f"
         },
         {
             "id": "0008",
@@ -70,7 +77,8 @@
             "day": 22,
             "mounth": 9,
             "time": "1:00 pm",
-            "location": "Howard A Yeager"
+            "location": "Howard A Yeager",
+            "id_loc": "c"
         },
         {
             "id": "0009",
@@ -79,8 +87,9 @@
             "day": 29,
             "mounth": 9,
             "time": "9:30 am",
-            "location": "Greenbay"
-        },   
+            "location": "Greenbay",
+            "id_loc": "b"
+        },
         {
             "id": "0010",
             "team1": "U2",
@@ -88,7 +97,8 @@
             "day": 6,
             "mounth": 10,
             "time": "9:30 am",
-            "location": "Marjorie P Hart"
+            "location": "Marjorie P Hart",
+            "id_loc": "d"
         },
         {
             "id": "0011",
@@ -97,7 +107,8 @@
             "day": 6,
             "mounth": 10,
             "time": "1:00 pm",
-            "location": "South"
+            "location": "South",
+            "id_loc": "f"
         },
         {
             "id": "0012",
@@ -106,7 +117,8 @@
             "day": 8,
             "mounth": 10,
             "time": "9:30 am",
-            "location": "Howard A Yeager"
+            "location": "Howard A Yeager",
+            "id_loc": "c"
         },
         {
             "id": "0013",
@@ -115,7 +127,8 @@
             "day": 8,
             "mounth": 10,
             "time": "1:00 pm",
-            "location": "Greenbay"
+            "location": "Greenbay",
+            "id_loc": "b"
         },
         {
             "id": "0014",
@@ -124,7 +137,8 @@
             "day": 20,
             "mounth": 10,
             "time": "9:30 am",
-            "location": "North"
+            "location": "North",
+            "id_loc": "e"
         },
         {
             "id": "0015",
@@ -133,7 +147,8 @@
             "day": 20,
             "mounth": 10,
             "time": "1:00 pm",
-            "location": "Marjorie P Hart"
+            "location": "Marjorie P Hart",
+            "id_loc": "d"
         },
         {
             "id": "0016",
@@ -142,7 +157,8 @@
             "day": 27,
             "mounth": 10,
             "time": "9:30 am",
-            "location": "AJ Katzenmaier"
+            "location": "AJ Katzenmaier",
+            "id_loc": "a"
         },
         {
             "id": "0017",
@@ -151,9 +167,8 @@
             "day": 27,
             "mounth": 10,
             "time": "1:00 pm",
-            "location": "Howard A Yeager"
+            "location": "Howard A Yeager",
+            "id_loc": "c"
         }
-
-        
     ]
 }

@@ -36,7 +36,12 @@ const routes = [
   {
     path: '/info-time',
     name: 'Info-Time',
-    component: () => import('../views/Info-Time')
+    component: () => import('../views/Info-Time.vue')
+  },
+  {
+    path: '/register',
+    name: 'Register',
+    component: () => import('../views/Register.vue')
   }
 ]
 
