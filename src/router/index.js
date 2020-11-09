@@ -31,17 +31,27 @@ const routes = [
   {
     path: '/info-team',
     name: 'Info-Team',
-    component: () => import('../views/Info-Team.vue')
+    // component: () => import('../components/InfoTime.vue')
+    
+    component: () => import('../views/Info.vue')
+    // component: () => import('../components/InfoTeam.vue')
+
   },
   {
     path: '/info-time',
     name: 'Info-Time',
-    component: () => import('../views/Info-Time.vue')
+    // component: () => import('../components/InfoTime.vue')
+    component: () => import('../views/Info.vue')
   },
   {
     path: '/register',
     name: 'Register',
     component: () => import('../views/Register.vue')
+  },
+  {
+    path: '/prueba',
+    name: 'Prueba',
+    component: () => import('../views/prueba.vue')
   }
 ]
 

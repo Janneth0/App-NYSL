@@ -1,17 +1,23 @@
 <template>
   <div class="register">
    <RegisterComp msg="REGISTER"/><!--lUEGO VER COMO CAMBIARLO POR TITLE-->
+   <p>{{datanysl}}</p>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 import RegisterComp from '@/components/RegisterComp.vue'
+import {mapState} from 'vuex';
 
 export default {
   name: 'Register',
+  props: ["team1","team2","date","hour","location","color","order"],
   components: {
-  RegisterComp
-  }
+    RegisterComp
+  },
+  computed:{ 
+        ...mapState(['datanysl'])
+    }
 }
 </script>

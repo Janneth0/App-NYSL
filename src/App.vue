@@ -18,6 +18,10 @@ export default {
     Nav,
   }
 };
+
+
+
+
 </script>
 
 
@@ -91,7 +95,7 @@ h2 {
   position: fixed;
   overflow-y: scroll;
   width: 100vw;
-  background-color: greenyellow;
+  background-color: lightcoral;
   top: 21vh;
   height: 70vh;
   padding: 10px;

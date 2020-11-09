@@ -1,6 +1,6 @@
 <template>
   <div class="rules">
-   <RulesComp msg="Rules"/><!--lUEGO VER COMO CAMBIARLO POR TITLE-->
+   <RulesComp msg="Rules-FORM"/><!--lUEGO VER COMO CAMBIARLO POR TITLE-->
    
   </div>
   
