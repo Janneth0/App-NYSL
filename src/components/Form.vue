@@ -404,7 +404,7 @@
       </fieldset>
       <fieldset class="login_r">
 
-        <input class="btn" type="submit" name="submit" value="Login" />
+        <input class="btn btn-danger" type="submit" name="submit" value="Login" />
         
         <!--input type="reset" value="Borrar información"-->
       </fieldset>
@@ -465,5 +465,10 @@ label {
 }
 .txt-c {
   text-align: center;
+}
+.btn{
+  text-align: center;
+  width: 30vw;
+  margin-left: 32vw;
 }
 </style>

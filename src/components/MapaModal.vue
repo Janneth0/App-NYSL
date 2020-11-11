@@ -70,21 +70,17 @@ export default {
 </script>
 
 <style scoped>
+
 .btn-primary,.btn-primary:focus {
   position: relative;
   /* color: aliceblue; */
   width: 80vw;
   text-align: center;
   padding: 10px;
-  background-color: #032e3b ;
-  border-color: #a4ff4a;
+ 
   margin: 2vh 9vw;
 }
-.btn-primary:hover{
-    border-color: #032e3b ;
-  background-color: #a4ff4a;
-  color: #032e3b;
-}
+
 
 
 .modal-content{

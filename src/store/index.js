@@ -6,7 +6,8 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     datanysl:{},
-    locations:{}
+    locations:{},
+    teams:{},
   },
   mutations: {
     insertData(state,payload){
@@ -14,6 +15,9 @@ export default new Vuex.Store({
     },
     insertLocation(state,playload){
       state.locations=playload.location
+    },
+    insertTeams(state,playload){
+      state.teams=playload.teamss
     }
   }, 
   actions: {

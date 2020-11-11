@@ -8,20 +8,64 @@
 
 <script>
 // @ is an alias to /src
-import Vue from "vue";
-import { BootstrapVue, IconsPlugin } from "bootstrap-vue";
+// import Vue from "vue";
+// import { BootstrapVue, IconsPlugin } from "bootstrap-vue";
 import Header from "@/components/Header.vue";
 // Install BootstrapVue
-Vue.use(BootstrapVue);
+// Vue.use(BootstrapVue);
 // Optionally install the BootstrapVue icon components plugin
-Vue.use(IconsPlugin);
+// Vue.use(IconsPlugin);
 import Nav from "@/components/Nav.vue";
+
+import { mapState, mapMutations } from "vuex";
 
 export default {
   components: {
     Header,
     Nav,
   },
+  computed: {
+    ...mapState(["nysldata"]),
+  },
+  data: function () {
+    return {
+      nysl: [],
+      // team: [],
+    };
+  },
+  methods: {
+    ...mapMutations(["insertData","insertLocation"]),
+    getData: async function (api) {
+      let promise = await fetch(api);
+      let isOk = promise.ok;
+      let json;
+      if (isOk) {
+        json = await promise.json();
+      } else {
+        alert(promise.status);
+        return 0;
+      }
+      this.nysl = json.Games;
+      console.log(json)
+      // this.team = this.getTeams();
+      this.insertData({nysl: json.Games });
+      this.insertLocation({location: json.Location });
+      console.log(this.nysl); //SI muestra todos los datos del JSON
+    },
+    //Busca todos los grupos y los ordena
+    // getTeams() {
+    //   for (let i = 0; i < this.nysl.length; i++) {
+    //     if (!this.team.includes(this.nysl[i].team1)) {
+    //       this.team.push(this.nysl[i].team1);
+    //     }
+    //   }
+    //   this.team.sort();
+    //   console.log(this.team);
+    // },
+  },
+  beforeMount() {
+    this.getData("datanysl.json");
+    }
 };
 </script>
 
@@ -133,5 +177,15 @@ h2{
 }
 .btn-secondary {
   background-color: #032e3b !important;
+}
+// BOTONES
+.btn-primary,.btn-primary:focus {
+ background-color: #032e3b ;
+  border-color: #a4ff4a;
+}
+.btn-primary:hover{
+    border-color: #032e3b ;
+  background-color: #a4ff4a;
+  color: #032e3b;
 }
 </style>
