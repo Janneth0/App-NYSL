@@ -15,6 +15,3 @@ name: "LocationComp",
 }
 </script>
 
-<style>
-
-</style>

@@ -12,7 +12,3 @@ name: "RegisterComp",
   }
 }
 </script>
-
-<style>
-
-</style>

@@ -8,23 +8,22 @@
 
 <script>
 // @ is an alias to /src
-
+import Vue from "vue";
+import { BootstrapVue, IconsPlugin } from "bootstrap-vue";
 import Header from "@/components/Header.vue";
+// Install BootstrapVue
+Vue.use(BootstrapVue);
+// Optionally install the BootstrapVue icon components plugin
+Vue.use(IconsPlugin);
 import Nav from "@/components/Nav.vue";
 
 export default {
   components: {
     Header,
     Nav,
-  }
+  },
 };
-
-
-
-
 </script>
-
-
 
 <style lang="scss">
 * {
@@ -35,59 +34,64 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  // text-align: center;
   color: #2c3e50;
-}
-i {
-  text-align: center;
-  font-size: 2rem;
-  width: 20vw;
-  color: #42b983;
-}
-#nav {
-  // position: fixed;
-  // top: 90vh;
-  background: red;
-  text-align: center;
-  height: 9vh;
-  padding: 10px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-
-    background-color: brown;
-  }
 }
 #header {
   position: fixed;
-  top: 0vh;
+  top: 0vh !important;
   color: beige;
   z-index: 999;
+  padding: 0px !important;
 
+}
+.modal-backdrop {
+  height: 0 !important;
+}
+#nav,
+#header {
+  background: #032e3b !important;
+  text-align: center;
+  height: 9vh;
+  padding: 10px;
+  i {
+    text-align: center;
+    font-size: 2rem;
+    width: 20vw;
+  }
   a {
+    // -webkit-text-fill-color: yellowgreen;
+    font-size: 110%;
+    -webkit-text-stroke: 0.4px black;
+     font-weight: 900; 
     font-weight: bold;
-    color: #2c3e50;
-
-    &img,
-    .router-link-exact-active {
-      color: #42b983;
+    color: #42b983;
+    border: #03394a;
+    text-align: center;
+    &.router-link-active {
+      color: #a4ff4a !important;
+      
     }
   }
+  .dropdown-menu {
+     background: #03394a;
+  }
 }
+
 h1 {
   position: fixed;
   font-size: 25px;
-  padding: 10px;
+  padding:  23px 10px 12px 10px;
+  margin-top: 0;
   text-align: center;
-  top: 13vh;
-  background-color: hotpink;
+  top: 11vh;
+  background-color: #a4ff4a;
 }
-h2 {
+#tituloh2 {
+  text-align: center;
+   font-weight: 900; 
+   width: 100vw;
+}
+h2{
   text-align: center;
 }
 .bodycontent {
@@ -95,7 +99,7 @@ h2 {
   position: fixed;
   overflow-y: scroll;
   width: 100vw;
-  background-color: lightcoral;
+  // background-color: #02364465 ;
   top: 21vh;
   height: 70vh;
   padding: 10px;
@@ -109,9 +113,6 @@ h2 {
 .navbar {
   padding: 3vh;
 }
-#titulo {
-  width: 100vw;
-}
 #menu {
   position: absolute;
   padding: 20px;
@@ -123,5 +124,14 @@ h2 {
   margin: 0px 10px 50px 0px !important;
   left: -20vw;
   float: right;
+  .dropdown-item{
+    padding: 0;
+  }
+}
+.bg-dark {
+  background-color: #03394a !important;
+}
+.btn-secondary {
+  background-color: #032e3b !important;
 }
 </style>

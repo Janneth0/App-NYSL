@@ -5,7 +5,7 @@
         <img src="../assets/nysl_logo.png" alt="logo-nysl" id="logo">
         </router-link>
         <!-- Logo-->
-        <h2 id="titulo">NYSL</h2>
+        <h2 id="tituloh2">NYSL</h2>
         <!--TITULO-->
         <div class="btn-group" role="group" id="menu">
           <button
@@ -34,7 +34,3 @@ export default {
 
 }
 </script>
-
-<style>
-
-</style>

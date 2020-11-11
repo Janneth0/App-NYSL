@@ -1,84 +1,51 @@
 <template>
+  <!-- <tr>
+      <td>{{day}}-{{mounth}}</td>
+      <td>{{location}}</td>
+      <td>{{datanysl[key].team1}}</td>
+    </tr> -->
   <div class="bodycontent">
-    <!-- FILTRO -->
-    <div id="filtro">
-      <!-- ------TEAM----- -->
-      <div class="form-group">
-        <label for="team"><h4>Team</h4></label>
-        <select id="team" class="form-control">
-          <option>U1</option>
-          <option>U2</option>
-          <option>U3</option>
-          <option>U4</option>
-          <option>U5</option>
-          <option>U6</option>
-          <!-- OPCIONES -->
-        </select>
-      </div>
-      <h2>VS</h2>
-      <!-- ------OPONENT----- -->
-      <div class="form-group">
-        <label for="oponent"><h4>Oponent</h4></label>
-        <select id="oponent" class="form-control">
-          <option>U1</option>
-          <option>U2</option>
-          <option>U3</option>
-          <option>U4</option>
-          <option>U5</option>
-          <option>U6</option>
-          <!-- OPCIONES -->
-        </select>
-      </div>
-    </div>
-
-    <!-- TABLA -->
-    <table class="table table-bordered">
-  <thead>
-    <tr>
-      <th scope="col">Date</th>
-      <th scope="col">Location</th>
-      <th scope="col">Time</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>8-9</td>
-      <td>Marjorie P.Hart</td>
-      <td>1:00 pm</td>
-    </tr>
-    <tr>
-      <td>6-10</td>
-      <td>South</td>
-      <td>1:00 pm</td>
-    </tr>
-  </tbody>
-</table>
-    <!-- -------------- -->
+    <transition name="component-fade" mode="out-in">
+      <component v-bind:is="view">hola</component>
+    </transition>
   </div>
 </template>
 
 <script>
-export default {
-  name: "i-team",
-  props: ["name", "link", "dir", "ide"],
-};
+// import { mapState } from "vuex";
 
+export default {
+  el: "#transition-components-demo",
+  data() {
+    return {
+      view: "v-a",
+    };
+  },
+  components: {
+    "v-a": {
+      template: "<div>Component A</div>",
+    },
+    "v-b": {
+      template: "<div>Component B</div>",
+    },
+  },
+  // name: "i-team",
+  // props: ["ide", "location", "day", "mounth", "time"],
+  // computed: {
+  //   ...mapState(["datanysl"]),
+  // },
+  // new Vue({
+};
 </script>
 
-<style lang="scss">
-.form-group {
-  position: relative;
-  padding-top: 20px;
-  width: 45vw;
-  float: left;
-  margin-left: 2vw;
+<style scoped >
+.component-fade-enter-active,
+.component-fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+.component-fade-enter, .component-fade-leave-to
+/* .component-fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
 }
 
-#filtro {
-  text-align: center;
-
-  h2 {
-    position: absolute;
-  }
-}
 </style>

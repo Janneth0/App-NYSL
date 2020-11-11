@@ -5,11 +5,15 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    datanysl:{}
+    datanysl:{},
+    locations:{}
   },
   mutations: {
     insertData(state,payload){
-      state.datanysl[payload.order] = payload.Games
+      state.datanysl = payload.nysl
+    },
+    insertLocation(state,playload){
+      state.locations=playload.location
     }
   }, 
   actions: {

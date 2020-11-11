@@ -65,31 +65,34 @@
 <script>
 export default {
   name: "locationBTN",
-  props: ["name", "link", "dir", "ide"],
+  props: ["name", "link", "dir", "ide","mounth","day"],
 };
 </script>
 
-<style>
-.modalBTN {
+<style scoped>
+.btn-primary,.btn-primary:focus {
   position: relative;
   /* color: aliceblue; */
   width: 80vw;
   text-align: center;
   padding: 10px;
-  background-color: blueviolet;
-
+  background-color: #032e3b ;
+  border-color: #a4ff4a;
   margin: 2vh 9vw;
 }
-.modal-backdrop {
-  height: 0 !important;
+.btn-primary:hover{
+    border-color: #032e3b ;
+  background-color: #a4ff4a;
+  color: #032e3b;
 }
-/* #exampleModalCenter{
-    z-index: 99;
-} */
-/* .btn {
-    z-index: 9999;
+
+
+.modal-content{
+  border-color: #032e3b ;
+  text-align: center;
 }
-.modal-backdrop{
-    z-index: 1000 !important;
-} */
+iframe{
+border-color: #a4ff4a;
+box-shadow: #032e3b;
+}
 </style>

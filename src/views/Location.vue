@@ -6,17 +6,7 @@
 
       <MapaModal v-for="(p, index) in location" :key="index" :name="p.name" :ide="p.id" :link="p.link" :dir="p.dir" />
     </div>
-    
-    <!-- <h4>INTENTANDO INGRESAR DATOS LOCATION</h4> -->
-
-    <!-- <RegisterComp msg="REGISTER"/> -->
-
-    <!-- CREAR BOTONES -->
-
-    <!-- <li v-for="(location, index) of location" :key="index">{{ index }}: {{ location }}</li> -->
-
-    
-    <!-- :url="p.url" :adress="p.adress" :link="p.link"  -->
+ 
   </div>
 </template>
 
