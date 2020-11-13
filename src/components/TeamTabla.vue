@@ -1,11 +1,12 @@
 <template>
-  <div class="table-Teams">
+
     <tr>
       <td class="day">{{ day }}-{{ mounth }}</td>
       <td class="location">{{ location }}</td>
       <td class="time">{{ time }}</td>
     </tr>
-  </div>
+
+  
 </template>
 
 <script>
@@ -18,6 +19,7 @@ export default {
   computed: {
     ...mapState(["datanysl"]),
   },
+  
 };
 </script>
 

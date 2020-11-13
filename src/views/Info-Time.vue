@@ -276,6 +276,12 @@ export default {
 </script>
 
 <style scoped lang="scss">
+  .card-body {
+    padding:0px !important;
+    .carousel-inner{
+      padding: 25px;
+    }
+  }
 .h {
   // background-color: blue;
   display: inline;
@@ -304,22 +310,18 @@ export default {
     width: 15px;
     border-radius: 50%;
   }
+  .sr-only{
+    background-color: brown;
+  }
   // .carousel-item{
   //   background-color: red;
   // }
   .carousel-control-next {
-    left: 80vw;
+    left: 85vw;
     color: royalblue;
+    justify-content: space-around;
   }
-  .carousel-control-prev {
-    left: 0vw;
 
-  }
-  .card-body {
-    padding: 51px 10px !important;
-    margin-left: 50px;
-    // z-index: 30;
-  }
 }
 .cont {
   // background-color: blue;
