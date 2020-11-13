@@ -23,17 +23,3 @@ export default {
 };
 </script>
 
-<style scoped>
-
-
-td {
-  width: 30vw;
-}
-.time,
-.date {
-  width: 15vw;
-}
-.location {
-  width: 60vh;
-}
-</style>

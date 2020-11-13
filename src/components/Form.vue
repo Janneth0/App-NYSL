@@ -260,7 +260,8 @@
               type="checkbox"
               name="Already Have a Uniform"
               value="Already Have a Uniform"
-            /><strong>Already Have a Uniform</strong><br />
+             id="db"
+            /><strong id="textU">Already Have a Uniform</strong><br />
           </label>
         </legend>
         <fieldset class="col">
@@ -414,10 +415,20 @@
 
 <script>
 // import ShowData from "@/components/Show-Data.vue";
-export default {};
+
+export default {
+  name:"form",
+};
 </script>
 
 <style scoped lang="scss">
+#db,#textU{
+  left: 0;
+  margin-left: -2s0PX;
+  
+  width: 5vw !important;
+}
+
 p {
   text-align: justify;
 }

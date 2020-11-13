@@ -1,5 +1,6 @@
 <template>
-    <div>
+
+    <div class="bodycontent"> 
       <p align=center>&nbsp;</p>
 <h1 align=center><font size="+1">The following information has been sent as your
   feedback:</font></h1>
@@ -9,7 +10,7 @@
     <th align="center">Form Field</th>
     <th align="center">Field Value</th>
   </tr>
-
+</table>
 
     </div>
 </template>

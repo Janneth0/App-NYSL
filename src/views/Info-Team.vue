@@ -1,28 +1,39 @@
 <template>
   <div class="bodycontent">
     <h1>Info-Game TEAMS</h1>
-    <div class="form-group select-info">
-      <label for="team"><h4>Team</h4></label>
-      <select class="form-control" v-model="team" v-on:click="getTabla">
-        <option
+    <div id="filtro">
+      <div class="form-group select-info">
+        <label for="team"><h4>Team</h4></label>
+        <select class="form-control" v-model="team" v-on:click="getTabla">
+          <option
+            v-on:click="getTabla"
+            v-for="(seleccionado, index) in tselec"
+            :key="index"
+            v-bind:value="seleccionado"
+          >
+            {{ seleccionado }}
+          </option>
+        </select>
+      </div>
+      <h2>VS</h2>
+      <div class="form-group select-info">
+        <label for="oponent"><h4>Oponent</h4></label>
+        <select
+          class="form-control "
+          v-model="oponent"
           v-on:click="getTabla"
-          v-for="(seleccionado, index) in tselec"
-          :key="index"
-          v-bind:value="seleccionado"
         >
-          {{ seleccionado }}
-        </option>
-      </select>
-      <select class="form-control" v-model="oponent" v-on:click="getTabla">
-        <option
-          v-for="(seleccionado, index) in tselec"
-          :key="index"
-          v-bind:value="seleccionado"
-        >
-          {{ seleccionado }}
-        </option>
-      </select>
+          <option
+            v-for="(seleccionado, index) in tselec"
+            :key="index"
+            v-bind:value="seleccionado"
+          >
+            {{ seleccionado }}
+          </option>
+        </select>
+      </div>
     </div>
+
     <table class="table table-bordered">
       <thead>
         <tr>
@@ -32,7 +43,7 @@
         </tr>
       </thead>
       <tbody>
-       <TeamTabla
+        <TeamTabla
           v-for="(seleccionado, index) in tabla"
           :key="index"
           v-bind:value="seleccionado"
@@ -44,10 +55,7 @@
       </tbody>
     </table>
 
-   
-    <!-- <span>Seleccionado: {{ team }} y {{ oponent }} {{ tabla }}</span> -->
 
-    <!-- {{ datanysl }} -->
   </div>
 </template>
 
@@ -116,8 +124,24 @@ export default {
 };
 </script>
 
-<style>
-select {
-  width: 20vh;
+<style scope lang="scss">
+#filtro {
+  .form-group {
+    position: relative;
+    padding-top: 20px;
+    width: 45vw;
+    float: left;
+    margin-left: 1.5vw;
+  }
+  h2 {
+    position: absolute;
+  }
+  h4 {
+    text-align: center !important;
+  }
+}
+
+#filtro {
+  text-align: center;
 }
 </style>
