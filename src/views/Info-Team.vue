@@ -1,10 +1,10 @@
 <template>
   <div class="bodycontent">
-    <h1>Info-Game TEAMS</h1>
-    <div id="filtro">
-      <div class="form-group select-info">
+    <h1 >Info-Game TEAMS</h1>
+    <div id="filtro" class="row" v-on:click="getTabla">
+      <div class="form-group select-info col-5" v-on:click="getTabla">
         <label for="team"><h4>Team</h4></label>
-        <select class="form-control" v-model="team" v-on:click="getTabla">
+        <select v-on:click="getTabla" class="form-control" v-model="team">
           <option
             v-on:click="getTabla"
             v-for="(seleccionado, index) in tselec"
@@ -15,15 +15,12 @@
           </option>
         </select>
       </div>
-      <h2>VS</h2>
-      <div class="form-group select-info">
+      <h2 class="col-2">VS</h2>
+      <div class="form-group select-info col-5">
         <label for="oponent"><h4>Oponent</h4></label>
-        <select
-          class="form-control "
-          v-model="oponent"
-          v-on:click="getTabla"
-        >
+        <select v-on:click="getTabla" class="form-control" v-model="oponent">
           <option
+            v-on:click="getTabla"
             v-for="(seleccionado, index) in tselec"
             :key="index"
             v-bind:value="seleccionado"
@@ -37,9 +34,9 @@
     <table class="table table-bordered">
       <thead>
         <tr>
-          <th class="date" scope="col">Day</th>
-          <th class="location" scope="col">Teams</th>
-          <th class="time" scope="col">Location</th>
+          <th class="date" scope="col">Date</th>
+          <th class="location" scope="col">Location</th>
+          <th class="time" scope="col">Time</th>
         </tr>
       </thead>
       <tbody>
@@ -54,8 +51,6 @@
         />
       </tbody>
     </table>
-
-
   </div>
 </template>
 
@@ -72,7 +67,6 @@ export default {
       oponent: "U6",
       tselec: [],
       tabla: [],
-      // options: [   { text: "Uno", value: "A", extra:"Hola" },
     };
   },
   components: {
@@ -97,51 +91,42 @@ export default {
       let tablaaux = [];
       let equipo = this.datanysl;
       for (let i = 0; i < equipo.length; i++) {
-        // console.log(equipo,team,oponent)
-        //  console.log(equipo, equipo.team1, equipo.team2);
         if (
           (equipo[i].team1 == team && equipo[i].team2 == oponent) ||
           (equipo[i].team2 == team && equipo[i].team1 == oponent)
         ) {
-          //  console.log(equipo, equipo[i].team1, equipo[i].team2);
           tablaaux.push(equipo[i]);
           console.log("tem1: ", equipo[i].team1, "team2: ", equipo[i].team2);
           this.tabla = tablaaux;
-          // console.log(tablaaux)
-          // console.log(this.tabla[i].team1)
         }
       }
     },
   },
   created: function () {
-    // this.tabla = this.gvalores(this.a, this.b, this.datanysl);
-    this.tselec = this.getteams(this.datanysl);
-    // this.tabla = this.getTabla(this.team, this.oponent);
-    // console.log(this.tabla);
-    // console.log(this.tselec);
     this.getTabla();
+    this.tselec = this.getteams(this.datanysl);
   },
 };
 </script>
 
 <style scope lang="scss">
-#filtro {
-  .form-group {
-    position: relative;
-    padding-top: 20px;
-    width: 45vw;
-    float: left;
-    margin-left: 1.5vw;
-  }
-  h2 {
-    position: absolute;
-  }
-  h4 {
-    text-align: center !important;
-  }
-}
+// #filtro {
+//   .form-group {
+//     position: relative;
+//     padding-top: 20px;
+//     width: 45vw;
+//     float: left;
+//     margin-left: 1.5vw;
+//   }
+//   h2 {
+//     position: absolute;
+//   }
+//   h4 {
+//     text-align: center !important;
+//   }
+// }
 
-#filtro {
-  text-align: center;
-}
+// #filtro {
+//   text-align: center;
+// }
 </style>

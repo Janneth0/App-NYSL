@@ -19,12 +19,12 @@ export default {
 </script>
 
 <style  scoped lang="scss">
-.about{
-  margin-bottom: 10%;
-}
-body{
-  background-color: aqua;
-}
+// .about{
+//   margin-bottom: 10%;
+// }
+// body{
+//   background-color: aqua;
+// }
 </style>
 
 

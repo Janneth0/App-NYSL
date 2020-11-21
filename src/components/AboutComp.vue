@@ -1,7 +1,7 @@
 <template>
 <!-- PARTE IMPORTANTE -->
   <div class="bodycontent">
-    <h1>{{ msg }}</h1>
+    <h1 >{{ msg }}</h1>
       <div class="accordion " id="accordionExample">
         <div class="card">
           <div class="card-header" id="headingOne">

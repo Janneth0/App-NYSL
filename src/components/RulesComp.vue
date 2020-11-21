@@ -333,28 +333,28 @@ export default {
 </script>
 
 <style  scoped lang="scss">
-p {
-  text-align: justify;
-}
-.card-body > ol > li {
-  margin-left: 10px;
-}
+// p {
+//   text-align: justify;
+// }
+// .card-body > ol > li {
+//   margin-left: 10px;
+// }
 
-#accordionb > li {
-  padding: 15px 5px;
-}
-#tresb > ol,
-#cuab > ol {
-  padding: 0px 0px 0px 5px;
-}
-#tresb > ol > li {
-  padding-bottom: 10px;
-}
-#unobsu,
-#unobsub {
-  padding: 10px;
-}
-#lista > li {
-  padding-bottom: 10px;
-}
+// #accordionb > li {
+//   padding: 15px 5px;
+// }
+// #tresb > ol,
+// #cuab > ol {
+//   padding: 0px 0px 0px 5px;
+// }
+// #tresb > ol > li {
+//   padding-bottom: 10px;
+// }
+// #unobsu,
+// #unobsub {
+//   padding: 10px;
+// }
+// #lista > li {
+//   padding-bottom: 10px;
+// }
 </style>

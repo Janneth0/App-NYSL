@@ -70,19 +70,15 @@ export default {
 </script>
 
 <style scoped>
-
+/* 
 .btn-primary,.btn-primary:focus {
   position: relative;
-  /* color: aliceblue; */
   width: 80vw;
   text-align: center;
   padding: 10px;
  
   margin: 2vh 9vw;
 }
-
-
-
 .modal-content{
   border-color: #032e3b ;
   text-align: center;
@@ -90,5 +86,5 @@ export default {
 iframe{
 border-color: #a4ff4a;
 box-shadow: #032e3b;
-}
+} */
 </style>

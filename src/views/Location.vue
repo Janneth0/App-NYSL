@@ -1,24 +1,26 @@
 <template>
-
   <div class="location">
-    <LocationComp msg="LOCATION" /><!--lUEGO VER COMO CAMBIARLO POR TITLE-->
     <div class="bodycontent">
-
-      <MapaModal v-for="(p, index) in location" :key="index" :name="p.name" :ide="p.id" :link="p.link" :dir="p.dir" />
+      <h1>Location</h1>
+      <MapaModal
+        v-for="(p, index) in location"
+        :key="index"
+        :name="p.name"
+        :ide="p.id"
+        :link="p.link"
+        :dir="p.dir"
+      />
     </div>
- 
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import LocationComp from "@/components/LocationComp.vue";
 
 import MapaModal from "@/components/MapaModal.vue";
 export default {
   name: "Location",
   components: {
-    LocationComp,
     MapaModal,
   },
   data: function () {
@@ -43,6 +45,6 @@ export default {
   },
   beforeMount() {
     this.getData("Location.json");
-  }
+  },
 };
 </script>

@@ -3,10 +3,10 @@
      <div class="aviso">ELEGUÍ UN MES</div>
     <h1>Game Info</h1>
     <!-- BOTONES CON MESES -->
-    <div id="accordion">
+    <div id="accordion" class="row">
       <!-- <div class="card"> -->
       <!-- <div class="card-header" > -->
-      <h5 class="mb-0 card-header h" id="headingOne">
+      <h5 class="mb-0 card-header h col-6" id="headingOne">
         <button
           class="btn btn-primary mes"
           type="button"
@@ -20,7 +20,7 @@
       </h5>
       <!-- </div> -->
       <!-- <div class=""> -->
-      <h5 class="mb-0 card-header h" id="headingTwo">
+      <h5 class="mb-0 card-header h hol-6" id="headingTwo">
         <button
           class="btn btn-primary collapsed mes"
           type="button"
@@ -276,73 +276,64 @@ export default {
 </script>
 
 <style scoped lang="scss">
-  .card-body {
-    padding:0px !important;
-    .carousel-inner{
-      padding: 25px;
-    }
-  }
-.h {
-  // background-color: blue;
-  display: inline;
-  width: 40vw;
-  z-index: 99;
-  padding: 20px 5vw !important;
-  .btn {
-    display: inline;
-    width: 40vw;
-    margin-top: 10px !important;
-  }
-}
-#carouselSeptember,
-#carouselOctober {
-  background-color: cadetblue;
-  position: relative;
-  ol {
-    position: fixed;
-    left: 0vw;
-    top: 82vh;
-    // background-color: black;
-  }
-  li{
-    background-color:  #032e3b;
-    height: 15px;
-    width: 15px;
-    border-radius: 50%;
-  }
-  .sr-only{
-    background-color: brown;
-  }
-  // .carousel-item{
-  //   background-color: red;
-  // }
-  .carousel-control-next {
-    left: 85vw;
-    color: royalblue;
-    justify-content: space-around;
-  }
-
-}
-.cont {
-  // background-color: blue;
-  width: 100vw;
-  // padding: 5px;
-  padding-left: -2vw;
-  height: 10vh;
-}
-.bodycontent {
-  padding: 0;
-  height: 80vh;
-}
-// table{
-//   z-index: 30;
+//   .card-body {
+//     padding:0px !important;
+//     .carousel-inner{
+//       padding: 25px;
+//     }
+//   }
+// .h {
+//   display: inline;
+//   width: 40vw;
+//   z-index: 99;
+//   padding: 20px 5vw !important;
+//   .btn {
+//     display: inline;
+//     width: 40vw;
+//     margin-top: 10px !important;
+//   }
 // }
-.aviso{
-  position: absolute;
-  top:30vh;
-  left: 33vw;
-  width: 45vw;
-  // z-index: 20;
-}
+// #carouselSeptember,
+// #carouselOctober {
+//   background-color: cadetblue;
+//   position: relative;
+//   top: 12vh;
+//   ol {
+//     position: fixed;
+//     left: 0vw;
+//     top: 82vh;
+//   }
+//   li{
+//     background-color:  #032e3b;
+//     height: 15px;
+//     width: 15px;
+//     border-radius: 50%;
+//   }
+//   .sr-only{
+//     background-color: brown;
+//   }
+//   .carousel-control-next {
+//     left: 85vw;
+//     color: royalblue;
+//     justify-content: space-around;
+//   }
+
+// }
+// .cont {
+//   width: 100vw;
+
+//   padding-left: -2vw !important;
+//   height: 10vh;
+// }
+// .bodycontent {
+//   padding: 0;
+//   height: 80vh;
+// }
+// .aviso{
+//   position: absolute;
+//   top:30vh;
+//   left: 33vw;
+
+// }
 </style>
 
