@@ -1,16 +1,16 @@
 <template>
   <div class="location">
     <div class="bodycontent">
-      <h1>Location</h1>
+      <h1>Location </h1>
       <MapaModal
-        v-for="(p, index) in location"
-        :key="index"
-        :name="p.name"
+        v-for="(p, index) in location"  :key="index"    :name="p.name"
         :ide="p.id"
         :link="p.link"
         :dir="p.dir"
+        :nam="p.nam"
       />
     </div>
+    
   </div>
 </template>
 
@@ -26,6 +26,8 @@ export default {
   data: function () {
     return {
       location: [],
+      // landscape:window.matchMedia('(min-width:600px)').matches
+      
     };
   },
   methods: {
@@ -44,7 +46,9 @@ export default {
     },
   },
   beforeMount() {
-    this.getData("Location.json");
+    this.getData("datanysl.json");
+    // window.addEventListener('resize',()=>window.matchMedia('(min-width:600px)').matches)
   },
+
 };
 </script>

@@ -1,239 +1,97 @@
 <template>
   <div class="bodycontent">
-     <div class="aviso">ELEGUÍ UN MES</div>
-    <h1>Game Info</h1>
+    <div class="aviso">ELEGUÍ UN MES</div>
+    <h1>Game Info-TIME</h1>
     <!-- BOTONES CON MESES -->
-    <div id="accordion" class="row">
-      <!-- <div class="card"> -->
-      <!-- <div class="card-header" > -->
-      <h5 class="mb-0 card-header h col-6" id="headingOne">
-        <button
-          class="btn btn-primary mes"
-          type="button"
-          data-toggle="collapse"
-          data-target="#september"
-          aria-expanded="true"
-          aria-controls="september"
-        >
-          SEPTEMBER
-        </button>
-      </h5>
-      <!-- </div> -->
-      <!-- <div class=""> -->
-      <h5 class="mb-0 card-header h hol-6" id="headingTwo">
-        <button
-          class="btn btn-primary collapsed mes"
-          type="button"
-          data-toggle="collapse"
-          data-target="#october"
-          aria-expanded="false"
-          aria-controls="october"
-        >
-          OCTOBER
-        </button>
-      </h5>
-      <!-- </div> -->
-      <div class="contenido">
-        <!-- ------------------------SEPTEMBER -->
-        <div
-          id="september"
-          class="cont collapse show"
-          aria-labelledby="headingOne"
-          data-parent="#accordion"
-          data-interval="false"
-        >
-          <div class="card-body">
-            <!-- Carrusel september -->
-            <div id="carouselSeptember" class="carousel">
-              <ol class="carousel-indicators">
-                <li
-                  data-target="#carouselSeptember"
-                  data-slide-to="0"
-                  class="active"
-                ></li>
-                <li data-target="#carouselSeptember" data-slide-to="1"></li>
-              </ol>
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <table class="table table-bordered">
-                    <thead>
-                      <tr>
-                        <th class="date" scope="col">Day</th>
-                        <th class="location" scope="col">Teams</th>
-                        <th class="time" scope="col">Location</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <TimeTabla
-                        v-for="(p, index) in sepnine"
-                        :key="index"
-                        :location="p.location"
-                        :team1="p.team1"
-                        :team2="p.team2"
-                        :day="p.day"
-                      />
-                    </tbody>
-                  </table>
+    <div class="btn-loc-p">
+      <div class="accordion" role="tablist">
+        <b-card no-body class="mb-1">
+          <b-row>
 
-                  <!-- tabla-->
-                </div>
-                <div class="carousel-item">
-                  <!-- tabla-->
-                  <table class="table table-bordered">
-                    <thead>
-                      <tr>
-                        <th class="date" scope="col">Day</th>
-                        <th class="location" scope="col">Teams</th>
-                        <th class="time" scope="col">Location</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <TimeTabla
-                        v-for="(p, index) in sepone"
-                        :key="index"
-                        :location="p.location"
-                        :team1="p.team1"
-                        :team2="p.team2"
-                        :day="p.day"
-                      />
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-              <a
-                class="carousel-control-prev"
-                href="#carouselSeptember"
-                role="button"
-                data-slide="prev"
+              <b-col cols="6" sm="12"><b-button block v-b-toggle="'accordion-sept'" class="b-land">September</b-button></b-col >
+              <b-col cols="6" sm="12"> <b-button block v-b-toggle="'accordion-oct'" class="b-land">Octubre</b-button></b-col >
+           
+           
+
+            <b-col cols="12" class="fix-cuerpo "
+              ><b-collapse
+                v-bind:id="'accordion-sept'"
+                visible
+                accordion="my-accordion"
+                role="tabpanel"
+                class="fix"
               >
-                <span
-                  class="carousel-control-prev-icon"
-                  aria-hidden="true"
-                ></span>
-                <span class="sr-only">Previous</span>
-              </a>
-              <a
-                class="carousel-control-next"
-                href="#carouselSeptember"
-                role="button"
-                data-slide="next"
+                <b-card-body >
+                  <h3 class="none-p">September</h3>
+                  <b-carousel
+                    id="carousel-1"
+                    :interval="0"
+                    controls
+                    indicators
+                    img-width="1024"
+                    img-height="480"
+                  
+                  >
+                    <b-carousel-slide >
+                      <!-- <p>a9am</p> -->
+                      <template #img >
+                        <b-table striped hover :items="sepnine" ></b-table>
+                      </template>
+                    </b-carousel-slide>
+                    <b-carousel-slide>
+                      <!-- <p>1pm</p> -->
+                      <template #img>
+                        <b-table striped hover :items="sepone"></b-table>
+                      </template>
+                    </b-carousel-slide>
+                  </b-carousel>
+                </b-card-body>
+              </b-collapse>
+            </b-col>
+
+            <b-col cols="12" class="fix-cuerpo"
+              ><b-collapse
+                v-bind:id="'accordion-oct'"
+                visible
+                accordion="my-accordion"
+                role="tabpanel"
+                class="fix"
               >
-                <span
-                  class="carousel-control-next-icon"
-                  aria-hidden="true"
-                ></span>
-                <span class="sr-only">Next</span>
-              </a>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- -----------------------OCTOBER -->
-        <div
-          id="october"
-          class="cont collapse"
-          aria-labelledby="headingTwo"
-          data-parent="#accordion"
-          data-interval="false"
-        >
-          <div class="card-body">
-            <div id="carouselOctober" class="carousel">
-              <ol class="carousel-indicators">
-                <li
-                  data-target="#carouselOctober"
-                  data-slide-to="0"
-                  class="active"
-                ></li>
-                <li data-target="#carouselOctober" data-slide-to="1"></li>
-              </ol>
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <table class="table table-bordered">
-                    <thead>
-                      <tr>
-                        <th class="date" scope="col">Day</th>
-                        <th class="location" scope="col">Teams</th>
-                        <th class="time" scope="col">Location</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <TimeTabla
-                        v-for="(p, index) in octnine"
-                        :key="index"
-                        :location="p.location"
-                        :team1="p.team1"
-                        :team2="p.team2"
-                        :day="p.day"
-                      />
-                    </tbody>
-                  </table>
-
-                  <!-- tabla-->
-                </div>
-                <div class="carousel-item">
-                  <!-- tabla-->
-                  <table class="table table-bordered">
-                    <thead>
-                      <tr>
-                        <th class="date" scope="col">Day</th>
-                        <th class="location" scope="col">Teams</th>
-                        <th class="time" scope="col">Location</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <TimeTabla
-                        v-for="(p, index) in octone"
-                        :key="index"
-                        :location="p.location"
-                        :team1="p.team1"
-                        :team2="p.team2"
-                        :day="p.day"
-                      />
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-              <a
-                class="carousel-control-prev"
-                href="#carouselOctober"
-                role="button"
-                data-slide="prev"
-              >
-                <span
-                  class="carousel-control-prev-icon"
-                  aria-hidden="true"
-                ></span>
-                <span class="sr-only">Previous</span>
-              </a>
-              <a
-                class="carousel-control-next"
-                href="#carouselOctober"
-                role="button"
-                data-slide="next"
-              >
-                <span
-                  class="carousel-control-next-icon"
-                  aria-hidden="true"
-                ></span>
-                <span class="sr-only">Next</span>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- <div class="cont fondo">SELECCIONAR UN MENU</div> -->
+                <b-card-body>
+                  <h3 class="none-p">Octuber</h3>
+                  <b-carousel
+                    id="carousel-1"
+                    :interval="0"
+                    controls
+                    indicators
+                    img-width="1024"
+                    img-height="480"
+                  >
+                    <b-carousel-slide>
+                      <!-- <p>a9am</p> -->
+                      <template #img>
+                        <b-table striped hover :items="octnine"></b-table>
+                      </template>
+                    </b-carousel-slide>
+                    <b-carousel-slide>
+                      <!-- <p>1pm</p> -->
+                      <template #img>
+                        <b-table striped hover :items="octone"></b-table>
+                      </template>
+                    </b-carousel-slide>
+                  </b-carousel>
+                </b-card-body>
+              </b-collapse>
+            </b-col>
+          </b-row>
+        </b-card>
       </div>
-
-      <!-- </div> -->
-      <div></div>
     </div>
- 
   </div>
 </template>
 
 <script>
-import TimeTabla from "@/components/TimeTabla.vue";
+// import TimeTabla from "@/components/TimeTabla.vue";
 import { mapState } from "vuex";
 
 export default {
@@ -247,7 +105,7 @@ export default {
     };
   },
   components: {
-    TimeTabla,
+    // TimeTabla,
   },
   computed: {
     ...mapState(["datanysl"]),
@@ -276,64 +134,58 @@ export default {
 </script>
 
 <style scoped lang="scss">
-//   .card-body {
-//     padding:0px !important;
-//     .carousel-inner{
-//       padding: 25px;
-//     }
-//   }
-// .h {
-//   display: inline;
-//   width: 40vw;
-//   z-index: 99;
-//   padding: 20px 5vw !important;
-//   .btn {
-//     display: inline;
-//     width: 40vw;
-//     margin-top: 10px !important;
-//   }
-// }
-// #carouselSeptember,
-// #carouselOctober {
-//   background-color: cadetblue;
-//   position: relative;
-//   top: 12vh;
-//   ol {
-//     position: fixed;
-//     left: 0vw;
-//     top: 82vh;
-//   }
-//   li{
-//     background-color:  #032e3b;
-//     height: 15px;
-//     width: 15px;
-//     border-radius: 50%;
-//   }
-//   .sr-only{
-//     background-color: brown;
-//   }
-//   .carousel-control-next {
-//     left: 85vw;
-//     color: royalblue;
-//     justify-content: space-around;
-//   }
+.card-body {
+  text-align: center;
+    padding:0px !important;
+    .carousel-inner{
+      padding: 25px;
+    }
+    td{
+      padding-bottom: -10px;
+      background-color: blue;
+    }
+}
+#accordion-sept,
+#accordion-oct {
+  background-color: rgba(105, 235, 240, 0.61);
+  position: relative;
+}
 
-// }
-// .cont {
-//   width: 100vw;
+.aviso{
+  position: absolute;
+  top:30vh;
+  left: 33vw;
+}
+ thead{
+      position:fixed !important;
+      top: 10vh;
+    }
+   
+@media screen and (orientation: landscape) {
+  .b-land{
+    float: left;
+    width: 20vw;
+    margin-bottom: 5rem;
+  }
+  .fix{
+        overflow-y: scroll;
 
-//   padding-left: -2vw !important;
-//   height: 10vh;
-// }
-// .bodycontent {
-//   padding: 0;
-//   height: 80vh;
-// }
-// .aviso{
-//   position: absolute;
-//   top:30vh;
-//   left: 33vw;
+    z-index: 99999;
+    height: 14rem;
 
-// }
+  }
+  
+  .fix-cuerpo{
+        position: fixed;
+
+    width: 70vw ;
+    margin: 0 0 0 25vw;
+    float: right;
+    li,a{
+      background-color: aqua;
+    }
+   
+  }
+}
 </style>
 
