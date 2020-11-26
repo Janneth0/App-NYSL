@@ -3,6 +3,10 @@
     <td class="day none-p">{{ day }}-{{ mounth }}</td>
     <td class="location none-p">{{ location }}</td>
     <td class="time none-p">{{ time }}</td>
+    <td> <router-link  v-bind:to="'/chatroom/'+ide" class="none-p">
+           chatroom
+            </router-link>
+    </td>
     <!-- Verificar  -->
     <div class="none-m datos">
       <p class="col-12 none-m">
@@ -10,7 +14,11 @@
         {{ time }}
       </p>
       <p class="col-12 none-m">Location: {{ location }}</p>
+       <p><router-link  v-bind:to="'/chatroom/'+ide"  class="none-m">
+             Chat!!
+            </router-link></p>
     </div>
+             <!-- {{tabla}} -->
   </tr>
 
   <!-- <div class="none-p">

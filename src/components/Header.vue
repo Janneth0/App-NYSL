@@ -20,7 +20,7 @@
             <div class="none-p">
               <b-dropdown-item><router-link to="/register">REGISTRATION</router-link></b-dropdown-item>
               <b-dropdown-item><router-link to="/rules">RULES</router-link></b-dropdown-item>
-              <b-dropdown-item href="#">Profile</b-dropdown-item>
+              <b-dropdown-item><router-link to="/user">Login</router-link></b-dropdown-item>
             </div>
 
             <b-nav-item-dropdown right class="none-m">
@@ -30,7 +30,7 @@
               </template>
               <b-dropdown-item><router-link to="/register">REGISTRATION</router-link></b-dropdown-item>
               <b-dropdown-item><router-link to="/rules">RULES</router-link></b-dropdown-item>
-              <b-dropdown-item href="#">Profile</b-dropdown-item>
+              <b-dropdown-item><router-link to="/user">Login</router-link></b-dropdown-item>
               <!-- <b-dropdown-item href="#">Sign Out</b-dropdown-item> -->
             </b-nav-item-dropdown>
           </b-navbar-nav>

@@ -114,12 +114,20 @@ export default {
     //Busca todos los grupos y los ordena
 
     getTablas: function (mes, hora) {
+      // let arrayFIN=null;
       let arrayd = [];
       for (let i = 0; i < this.datanysl.length; i++) {
         if (this.datanysl[i].mounth == mes && this.datanysl[i].time == hora) {
           arrayd.push(this.datanysl[i]);
-        }
+          // console.log("Array",arrayd)
+          //  arrayd[0].id.splice(1); 
+        //  arrayd.shift();
+        //   console.log("Array",arrayd)
+        }  
+          
       }
+
+          console.log("Array",arrayd)
       return arrayd;
     },
   },
@@ -128,7 +136,7 @@ export default {
     this.sepone = this.getTablas(9, "1:00 pm");
     this.octnine = this.getTablas(10, "9:30 am");
     this.octone = this.getTablas(10, "1:00 pm");
-    console.log(this.sepnine);
+    // console.log(this.sepnine);
   },
 };
 </script>

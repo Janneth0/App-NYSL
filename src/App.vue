@@ -36,7 +36,7 @@ export default {
     };
   },
   methods: {
-    ...mapMutations(["insertData", "insertLocation"]),
+    ...mapMutations(["insertData", "insertLocation","listenUser"]),
     getData: async function (api) {
       let promise = await fetch(api);
       let isOk = promise.ok;
@@ -54,19 +54,10 @@ export default {
       this.insertLocation({ location: json.Location });
       console.log(this.nysl); //SI muestra todos los datos del JSON
     },
-    //Busca todos los grupos y los ordena
-    // getTeams() {
-    //   for (let i = 0; i < this.nysl.length; i++) {
-    //     if (!this.team.includes(this.nysl[i].team1)) {
-    //       this.team.push(this.nysl[i].team1);
-    //     }
-    //   }
-    //   this.team.sort();
-    //   console.log(this.team);
-    // },
   },
   beforeMount() {
     this.getData("datanysl.json");
+    this.listenUser()
   },
 };
 </script>

@@ -47,6 +47,21 @@ const routes = [
     path: '/register',
     name: 'Register',
     component: () => import('../views/Register.vue')
+  },
+  {
+    path: '/user',
+    name: 'Users',
+    component: () => import('../views/User.vue')
+  },
+  {
+    path: '/userinfo',
+    name: 'UserInfo',
+    component: () => import('../views/UserInfo.vue')
+  },
+  {
+    path: '/chatroom/:id',
+    name: 'Chatroom',
+    component: () => import('../components/Chat.vue')
   }
 ]
 
