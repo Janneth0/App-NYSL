@@ -1,7 +1,7 @@
 <template>
   <div id="header">
      <div>
-      <b-navbar toggleable="sm" type="dark">
+      <b-navbar toggleable="sm" >
         <b-navbar-brand href="#" class="row"
           ><router-link to="/" class="col-auto mr-auto">
             <img src="../assets/nysl_logo.png" alt="logo-nysl" id="logo" />

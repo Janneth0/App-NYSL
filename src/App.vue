@@ -48,11 +48,11 @@ export default {
         return 0;
       }
       this.nysl = json.Games;
-      console.log(json);
+      // console.log(json);
       // this.team = this.getTeams();
       this.insertData({ nysl: json.Games });
       this.insertLocation({ location: json.Location });
-      console.log(this.nysl); //SI muestra todos los datos del JSON
+      console.log("nysl",this.nysl); //SI muestra todos los datos del JSON
     },
   },
   beforeMount() {
@@ -85,7 +85,7 @@ body {
     width: 7vw;
     height: 7vw;
     border-radius: 100%;
-    background: #032e3b;
+    background:#03394a;
     border: none;
     outline: none;
     color: #fff;
@@ -109,7 +109,7 @@ body {
   .botonF3,
   .botonF4,
   .botonF5 {
-    background: #032e3b;
+    background: #03394a;
   }
   a {
     color: #42b983;
@@ -120,13 +120,13 @@ body {
 }
 
 .bg-dark,
-.btn-secondary {
-  background-color: #03394a !important;
+.btn-secondary, .navbar-dark {
+  background-color:#03394a !important;
 }
 
 #nav,
 #header {
-  background: #032e3b !important;
+  background:#03394a !important;
   i {
     text-align: center;
     font-size: 2rem;
@@ -259,16 +259,5 @@ h1 {
 
 
 
-// // BOTONES
-// .btn-primary,
-// .btn-primary:focus {
-//   background-color: #032e3b;
-//   border-color: #a4ff4a;
-// }
-// .btn-primary:hover {
-//   border-color: #032e3b;
-//   background-color: #a4ff4a;
-//   color: #032e3b;
-// }
-// }
+
 </style>

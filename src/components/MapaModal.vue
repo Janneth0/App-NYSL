@@ -36,16 +36,7 @@
 export default {
   name: "loc-info",
   props: ["name", "nam", "link", "dir", "ide","mounth","day","land"],
-  // data(){
-  //   return{
-  //     landscape: window.matchMedia('(min-width:600px)').matches
-  //   }
-  // },
-  // methods:{
-  //   update(){
-  //     window.addEventListener('resize',()=>window.matchMedia('(min-width:600px)').matches)
-  //   }
-  // }
+
 };
 </script>
 

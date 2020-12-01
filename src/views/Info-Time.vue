@@ -7,13 +7,17 @@
       <div class="accordion" role="tablist">
         <b-card no-body class="mb-1">
           <b-row>
-
-              <b-col cols="6" sm="12"><b-button block v-b-toggle="'accordion-sept'" class="b-land">September</b-button></b-col >
-              <b-col cols="6" sm="12"> <b-button block v-b-toggle="'accordion-oct'" class="b-land">Octubre</b-button></b-col >
-           
-           
-
-            <b-col cols="12" class="fix-cuerpo "
+            <b-col cols="6" sm="12"
+              ><b-button block v-b-toggle="'accordion-sept'" class="b-land"
+                >September</b-button
+              ></b-col
+            >
+            <b-col cols="6" sm="12">
+              <b-button block v-b-toggle="'accordion-oct'" class="b-land"
+                >October</b-button
+              ></b-col
+            >
+            <b-col cols="12" class="fix-cuerpo"
               ><b-collapse
                 v-bind:id="'accordion-sept'"
                 visible
@@ -21,7 +25,7 @@
                 role="tabpanel"
                 class="fix"
               >
-                <b-card-body >
+                <b-card-body>
                   <h3 class="none-p">September</h3>
                   <b-carousel
                     id="carousel-1"
@@ -30,12 +34,11 @@
                     indicators
                     img-width="1024"
                     img-height="480"
-                  
                   >
-                    <b-carousel-slide >
+                    <b-carousel-slide>
                       <!-- <p>a9am</p> -->
-                      <template #img >
-                        <b-table striped hover :items="sepnine" ></b-table>
+                      <template #img>
+                        <b-table striped hover :items="sepnine"></b-table>
                       </template>
                     </b-carousel-slide>
                     <b-carousel-slide>
@@ -58,7 +61,7 @@
                 class="fix"
               >
                 <b-card-body>
-                  <h3 class="none-p">Octuber</h3>
+                  <h3 class="none-p">October</h3>
                   <b-carousel
                     id="carousel-1"
                     :interval="0"
@@ -91,6 +94,7 @@
 </template>
 
 <script>
+// import { delete } from "vue/types/umd";
 // import TimeTabla from "@/components/TimeTabla.vue";
 import { mapState } from "vuex";
 
@@ -98,45 +102,49 @@ export default {
   name: "i-time",
   data: function () {
     return {
+      // prueba: [{ Day: "1", Teams: "hola", Location: "ubicacion"}],
       sepnine: [],
       sepone: [],
       octnine: [],
       octone: [],
     };
   },
-  components: {
-    // TimeTabla,
-  },
   computed: {
     ...mapState(["datanysl"]),
   },
   methods: {
-    //Busca todos los grupos y los ordena
-
     getTablas: function (mes, hora) {
-      // let arrayFIN=null;
+      let arrayprueba = {
+        Day: null,
+        Teams: null,
+        Location: null,
+      };
       let arrayd = [];
+      let array = [];
+      console.log("probando ",this.datanysl)
       for (let i = 0; i < this.datanysl.length; i++) {
-        if (this.datanysl[i].mounth == mes && this.datanysl[i].time == hora) {
+        if (this.datanysl[i].month == mes && this.datanysl[i].time == hora) {
           arrayd.push(this.datanysl[i]);
-          // console.log("Array",arrayd)
-          //  arrayd[0].id.splice(1); 
-        //  arrayd.shift();
-        //   console.log("Array",arrayd)
-        }  
-          
+        }
       }
+ 
+      for (let j = 0; j < arrayd.length; j++) {
 
-          console.log("Array",arrayd)
+        arrayprueba.Day=arrayd[j].day;
+        arrayprueba.Teams = arrayd[j].team1 + " vs " + arrayd[j].team2;
+        arrayprueba.Location = arrayd[j].location;
+        array.push(arrayprueba);
+      }
       return arrayd;
     },
   },
+ 
   created: function () {
     this.sepnine = this.getTablas(9, "9:30 am");
     this.sepone = this.getTablas(9, "1:00 pm");
     this.octnine = this.getTablas(10, "9:30 am");
     this.octone = this.getTablas(10, "1:00 pm");
-    // console.log(this.sepnine);
+    // console.log(this.sepnine);             
   },
 };
 </script>
@@ -144,14 +152,14 @@ export default {
 <style scoped lang="scss">
 .card-body {
   text-align: center;
-    padding:0px !important;
-    .carousel-inner{
-      padding: 25px;
-    }
-    td{
-      padding-bottom: -10px;
-      background-color: blue;
-    }
+  padding: 0px !important;
+  .carousel-inner {
+    padding: 25px;
+  }
+  td {
+    padding-bottom: -10px;
+    background-color: blue;
+  }
 }
 #accordion-sept,
 #accordion-oct {
@@ -159,40 +167,39 @@ export default {
   position: relative;
 }
 
-.aviso{
+.aviso {
   position: absolute;
-  top:30vh;
+  top: 30vh;
   left: 33vw;
 }
- thead{
-      position:fixed !important;
-      top: 10vh;
-    }
-   
+thead {
+  position: fixed !important;
+  top: 10vh;
+}
+
 @media screen and (orientation: landscape) {
-  .b-land{
+  .b-land {
     float: left;
     width: 20vw;
     margin-bottom: 5rem;
   }
-  .fix{
-        overflow-y: scroll;
+  .fix {
+    overflow-y: scroll;
 
     z-index: 99999;
     height: 14rem;
-
   }
-  
-  .fix-cuerpo{
-        position: fixed;
 
-    width: 70vw ;
+  .fix-cuerpo {
+    position: fixed;
+
+    width: 70vw;
     margin: 0 0 0 25vw;
     float: right;
-    li,a{
+    li,
+    a {
       background-color: aqua;
     }
-   
   }
 }
 </style>

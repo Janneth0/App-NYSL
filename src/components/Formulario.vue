@@ -161,17 +161,10 @@
             <b-form-input  id="date" v-model="form.date" type="date" placeholder="Enter your last name"></b-form-input>
           </b-col>
         </b-row>
-
-        
-        
-        
-      </fieldset>
+        </fieldset>
         </b-row>
 
       </b-form-group>
-      
-      
-
       <b-button type="submit" variant="primary">Submit</b-button>
       <b-button type="reset" variant="danger">Reset</b-button>
     </b-form>

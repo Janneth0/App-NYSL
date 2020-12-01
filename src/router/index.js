@@ -56,7 +56,7 @@ const routes = [
   {
     path: '/userinfo',
     name: 'UserInfo',
-    component: () => import('../views/UserInfo.vue')
+    component: () => import('../components/UserInfo.vue')
   },
   {
     path: '/chatroom/:id',

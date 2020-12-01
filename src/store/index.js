@@ -11,6 +11,7 @@ export default new Vuex.Store({
     datanysl:{},
     locations:{},
     teams:{},
+    filtrado:{},
   },
   mutations: {
     insertData(state,payload){
@@ -22,9 +23,9 @@ export default new Vuex.Store({
     insertTeams(state,playload){
       state.teams=playload.teamss
     },
-    // changeUserInfo(state,payload){
-    //   state.user=payload
-    // },
+    partidoFiltrado(state,payload){
+      state.filtrado=payload.filtrado
+    },
     listenUser(state){
        firebase.auth().onAuthStateChanged(user=>{
          if(user){

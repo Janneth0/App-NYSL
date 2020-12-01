@@ -1,24 +1,39 @@
 <template>
   <tr>
-    <td class="day none-p">{{ day }}-{{ mounth }}</td>
+    <td class="day none-p">{{ day }}-{{ month }}</td>
     <td class="location none-p">{{ location }}</td>
     <td class="time none-p">{{ time }}</td>
-    <td> <router-link  v-bind:to="'/chatroom/'+ide" class="none-p">
-           chatroom
-            </router-link>
+    <td class="none-p">
+      <template v-if="user == null">
+        <router-link to="/user"
+          ><b-icon-chat-dots-fill></b-icon-chat-dots-fill
+        ></router-link>
+      </template>
+      <template v-if="user != null">
+        <router-link v-bind:to="'/chatroom/' + ide" class="none-p">
+          <b-icon-chat-dots-fill> </b-icon-chat-dots-fill
+        ></router-link>
+      </template>
     </td>
     <!-- Verificar  -->
     <div class="none-m datos">
       <p class="col-12 none-m">
-        Date: {{ day }}/{{ mounth }} at
+        Date: {{ day }}/{{ month }} at
         {{ time }}
       </p>
       <p class="col-12 none-m">Location: {{ location }}</p>
-       <p><router-link  v-bind:to="'/chatroom/'+ide"  class="none-m">
-             Chat!!
-            </router-link></p>
+      <p class="none-m">
+   
+        <template v-if="user == null">
+          no hay usuario
+        <router-link to="/user" ><b-icon-chat-dots-fill></b-icon-chat-dots-fill  ></router-link>
+      </template>
+      <template v-else>
+        <router-link v-bind:to="'/chatroom/' + ide" class="none-m"> <b-icon-chat-dots-fill></b-icon-chat-dots-fill></router-link>
+      </template>
+      </p>
     </div>
-             <!-- {{tabla}} -->
+    <!-- {{tabla}} -->
   </tr>
 
   <!-- <div class="none-p">
@@ -30,13 +45,11 @@
 
 <script>
 import { mapState } from "vuex";
-
 export default {
   name: "i-time",
-  props: ["ide", "location", "day", "mounth", "time"],
-
+  props: ["ide", "location", "day", "month", "time"],
   computed: {
-    ...mapState(["datanysl"]),
+    ...mapState(["datanysl","user"]),
   },
 };
 </script>
