@@ -3,22 +3,14 @@
     <div class="row">
       <Header class="col-12" />
       <div><router-view /></div>
-      <Nav class="" />
+      <Nav class="chat" />
     </div>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-// import Vue from "vue";
-// import { BootstrapVue, IconsPlugin } from "bootstrap-vue";
 import Header from "@/components/Header.vue";
-// Install BootstrapVue
-// Vue.use(BootstrapVue);
-// Optionally install the BootstrapVue icon components plugin
-// Vue.use(IconsPlugin);
 import Nav from "@/components/Nav.vue";
-
 import { mapState, mapMutations } from "vuex";
 
 export default {
@@ -32,11 +24,10 @@ export default {
   data: function () {
     return {
       nysl: [],
-      // team: [],
     };
   },
   methods: {
-    ...mapMutations(["insertData", "insertLocation","listenUser"]),
+    ...mapMutations(["insertData", "insertLocation", "listenUser"]),
     getData: async function (api) {
       let promise = await fetch(api);
       let isOk = promise.ok;
@@ -48,16 +39,14 @@ export default {
         return 0;
       }
       this.nysl = json.Games;
-      // console.log(json);
-      // this.team = this.getTeams();
       this.insertData({ nysl: json.Games });
       this.insertLocation({ location: json.Location });
-      console.log("nysl",this.nysl); //SI muestra todos los datos del JSON
+      console.log("nysl", this.nysl); 
     },
   },
   beforeMount() {
     this.getData("datanysl.json");
-    this.listenUser()
+    this.listenUser();
   },
 };
 </script>
@@ -85,7 +74,7 @@ body {
     width: 7vw;
     height: 7vw;
     border-radius: 100%;
-    background:#03394a;
+    background: #03394a;
     border: none;
     outline: none;
     color: #fff;
@@ -104,6 +93,7 @@ body {
     border-radius: 100%;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
     margin-top: 10px;
+    margin-right: 5px;
   }
   .botonF2,
   .botonF3,
@@ -120,20 +110,24 @@ body {
 }
 
 .bg-dark,
-.btn-secondary, .navbar-dark {
-  background-color:#03394a !important;
+.btn-secondary,
+.navbar-dark {
+  background-color: #044255 !important;
+  &:active {
+    background-color: #a4ff4a !important;
+    color: #03394a !important;
+  }
 }
 
 #nav,
 #header {
-  background:#03394a !important;
+  background: #03394a !important;
   i {
     text-align: center;
     font-size: 2rem;
     width: 20vw;
   }
   a {
-    // font-size: 110%;
     -webkit-text-stroke: 0.4px black;
     font-weight: 900;
     font-weight: bold;
@@ -156,14 +150,11 @@ body {
   #tituloh2 {
     text-align: center;
     font-size: 1.5rem !important;
-
-    
   }
   .h {
     left: -5rem;
   }
   a {
-    // font-size: 110%;
     -webkit-text-stroke: 0.4px black;
     font-weight: 900;
     font-weight: bold;
@@ -176,7 +167,6 @@ body {
   }
   .dropdown-menu {
     background: #03394a;
-    // padding-right: 10px;
   }
 }
 #nav {
@@ -188,7 +178,7 @@ body {
   position: fixed;
   overflow-y: scroll;
   width: 100vw;
-  padding: 20px 20px 0px 10px;//genialajeje
+  padding: 20px 20px 0px 10px; 
 }
 h1 {
   position: fixed;
@@ -199,7 +189,7 @@ h1 {
   width: 100vw;
   background-color: #a4ff4a;
   margin: -10px;
-  padding: 1px; //modifcar segun respon
+  padding: 1px; 
 }
 .modal-backdrop {
   height: 0 !important;
@@ -209,17 +199,15 @@ h1 {
 }
 
 @media screen and (orientation: portrait) {
-  //mobil
   .none-m {
-    display: none !important;
+    display: none ;
   }
   #tituloh2 {
     font-size: 1.8rem !important;
     margin: 0rem 0rem 0.5rem -1rem;
   }
   #logo {
-    height:3.5rem;
-    // padding: 5px 0px !important;
+    height: 3.5rem;
   }
   .bodycontent,
   h1 {
@@ -233,21 +221,18 @@ h1 {
   }
 }
 @media screen and (orientation: landscape) {
-  //pantalla grande
   .none-p {
-    display: none !important;
+    display: none  !important;
   }
-#tituloh2{
-
-  text-align: center;
-  width: 200rem !important;
-
-}
+  #tituloh2 {
+    text-align: center;
+    width: 200rem !important;
+  }
   #logo {
     height: 2.8rem;
-    // padding: 5px 0px !important;
   }
-  h1,.bodycontent {
+  h1,
+  .bodycontent {
     top: 3.5rem;
     padding-top: 1.5vh;
   }
@@ -256,8 +241,4 @@ h1 {
     bottom: 0vh;
   }
 }
-
-
-
-
 </style>

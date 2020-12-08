@@ -168,7 +168,7 @@
       <b-button type="submit" variant="primary">Submit</b-button>
       <b-button type="reset" variant="danger">Reset</b-button>
     </b-form>
-    <b-card class="mt-3" header="Form Data Result">
+    <b-card class="mt-3 none" header="Form Data Result">
       <pre class="m-0">{{ form }}</pre>
     </b-card>
   </b-container>
@@ -247,7 +247,6 @@ export default {
 
       this.form.food = null;
       this.form.checked = [];
-      // Trick to reset/clear native browser form validation state
       this.show = false;
       this.$nextTick(() => {
         this.show = true;
@@ -260,81 +259,11 @@ export default {
 
 
 <style scoped lang="scss">
-// @media screen and (orientation: portrait) {
-//   input{
-//     width: 100%;
-//   }
-// }
-// input {
-//   width: 17rem !important;
-//   margin-right: 50px ;
-// }
-// .bodycontent {
-//   // VERIFICAR SI ESTO FUNCIONA EN EL FORM
-//   width: 100vw !important;
-//   margin-left: -20px !important;
-// }
-// .container-form{
-//   margin: 0;
-// }
-// #db,#textU{
-//   left: 0;
-//   margin-left: -2px;
+.none{
+  display: none;
+}
+button{
+  margin-left: 17vw;
+}
 
-//   width: 5vw !important;
-// }
-
-// p {
-//   text-align: justify;
-// }
-// #gender,
-// #grade {
-//   float: left;
-//   position: relative;
-//   left: 6vw;
-//   // background-color: aqua;
-//   width: 24vw;
-//   input {
-//     margin: 0;
-//     width: 5vw;
-//     padding: 0;
-//   }
-//   label {
-//     width: 30vw;
-//   }
-//   .grade-col {
-//     width: 29vw;
-//     padding-left: 15px;
-//     float: left;
-//   }
-// }
-// #grade {
-//   padding-left: 10px;
-//   width: 64vw;
-// }
-// input,
-// label {
-//   margin: 5px 20px 5px 3vw;
-//   width: 80vw;
-// }
-// .col1,
-// .col2 {
-//   // background-color: chocolate;
-//   width: 40vw;
-//   float: left;
-//   position: relative;
-//   input {
-//     margin: 0;
-//     width: 5vw;
-//     padding: 0;
-//   }
-// }
-// .txt-c {
-//   text-align: center;
-// }
-// .btn{
-//   text-align: center;
-//   width: 30vw;
-//   margin-left: 32vw;
-// }
 </style>

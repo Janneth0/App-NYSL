@@ -1,5 +1,4 @@
 <template>
-  <!-- PARTE IMPORTANTE -->
   <div>
     <div id="loc-info" class="none-p">
       <b-button v-b-modal="'modal-'+ide" centered class="btn-loc-mob">{{name}}</b-button>
@@ -52,13 +51,9 @@ export default {
   position: relative;
  margin: 0vh  10vw 0.5vh 9px;
 }
-/* .fix{
-  position: fixed;
-} */
 
 .fix-cuerpo{
   text-align: center;
-  /* background-color: blueviolet; */
   top: 5rem;
    position: fixed;
   z-index: 999;

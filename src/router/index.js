@@ -61,7 +61,7 @@ const routes = [
   {
     path: '/chatroom/:id',
     name: 'Chatroom',
-    component: () => import('../components/Chat.vue')
+    component: () => import('../components/Chatroom.vue')
   }
 ]
 

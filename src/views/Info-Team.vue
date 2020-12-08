@@ -18,15 +18,10 @@
 
           <div class="row col-2 col-sm-12 veri" @click="getTabla">
             <h2 class="col-6 col-sm-6 vs">VS</h2>
-            <button class="search">
-              <b-icon-search class="col-6 col-sm-3"> </b-icon-search>
-            </button>
+            <i class="fas fa-search col-6 col-sm-6 search"></i>
           </div>
-          <!-- <div class="col-2 col-sm-12 veri"></div> -->
-
+  
           <div class="form-group select-info col-5 col-sm-12">
-            <!-- <label for="oponent"><h4>Oponent</h4></label> -->
-
             <b-icon-shield-fill class="insg none-p"> </b-icon-shield-fill>
             <p class="n-o none-p">{{ oponent }}</p>
             <b-form-group label="OPONENT:" label-for="team2">
@@ -40,7 +35,6 @@
           </div>
         </div>
       </div>
-      <!-- TABLA SOLO VISIBLE EN MOVIL -->
 
       <div class="col-12 col-sm-8 none-p tablem">
         <table class="table table-bordered">
@@ -96,15 +90,6 @@
     <template v-if="exist == false">
       <h3 class="existe">No existe Partido!!</h3>
     </template>
-    <!-- <template v-else>
-      
-    </template> -->
-    <!-- <router-link :to="'/chatroom/'+id" class="btnchat">
-      <b-button>CHAT!!</b-button>
-    </router-link> -->
-    <!-- <div class="row btnchat">
-      <button type="button" class="btn btn-success col-12">CHAT!!</button>
-    </div> -->
   </div>
 </template>
 
@@ -153,7 +138,6 @@ export default {
           aux = aux + 1;
           this.tabla = tablaaux;
           this.exist = true;
-
         }
       }
       if (aux == 0) {
@@ -175,10 +159,9 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 .existe {
   position: absolute;
-
 }
 .veri {
   padding: 0px 0px 0px 0.5rem;
@@ -186,24 +169,8 @@ export default {
 }
 .vs {
   padding: 0;
-  // margin: 30px 0px 0px 0px;
 }
 
-.search {
-  margin: 0 30px 0px -10px;
-  background-color: #03394a;
-  border-radius: 100%;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  g {
-    color: #a4ff4a !important;
-  }
-}
-.search:active {
-  background-color: #a4ff4a !important;
-  g {
-    color: #03394a !important;
-  }
-}
 .cent {
   text-align: center;
   top: 1vh;
@@ -220,7 +187,7 @@ export default {
   margin-bottom: -2rem;
   top: -3.3rem;
   &.n-o {
-    color: blanchedalmond;
+    color: #42b983;
     z-index: 10000;
   }
 }
@@ -232,13 +199,24 @@ export default {
   top: 80vh !important;
   left: 30vw;
 }
+.fa-search:before {
+  background-color: #03394a;
+  color: #a4ff4a;
+  font-size: 1.4rem;
+  margin: 1.5rem 0rem 0rem -1.4rem;
+  border-radius: 100%;
+  padding: 10px;
+  &:active {
+    color: #03394a;
+    background-color: #a4ff4a;
+  }
+}
 @media screen and (orientation: landscape) {
   .existe {
     left: 50vw;
     top: 10rem;
   }
   .search {
-    // height: 3rem;
     width: 3rem;
     padding: 0.5rem 0.8rem 10px 0px;
   }
@@ -248,8 +226,8 @@ export default {
 }
 
 @media screen and (orientation: portrait) {
-  .info{
-padding-top: 15vh;
+  .info {
+    padding-top: 15vh;
   }
   .existe {
     text-align: center;
@@ -259,10 +237,8 @@ padding-top: 15vh;
   .veri {
     padding: 0px 0px 0px 0.7rem;
   }
-  .search {
-    height: 3rem;
-    padding: 0.5rem 0.7rem 10px 0px;
-  }
+  
+
   .btnchat {
     position: fixed;
     top: 80vh !important;

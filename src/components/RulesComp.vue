@@ -1,11 +1,9 @@
 <template>
-<!-- PARTE IMPORTANTE -->
   <div class="bodycontent">
     <h1>{{ msg }}</h1>
     <h2>Northside Youth Soccer League</h2>
     <h3>Rules of Play &amp; Policies</h3>
     <p>FIFA rules shall govern NYSL play except as modified herein.</p>
-    <!-- Acordion Rules -->
    
     <div class="accordion " id="accordionExample">
          <div class="card">
@@ -159,7 +157,6 @@
                     (8) players per side. (National rule 4036 section 2)
                 </p>
             </li>
-            <!--Aun no se que hacer con este-->
             <li>Recreational/Developmental players at other ages or where numbers in the playing area are low are
                 strongly
                 encouraged to play small-sided games on reduced field size.</li>
@@ -332,29 +329,3 @@ export default {
 };
 </script>
 
-<style  scoped lang="scss">
-// p {
-//   text-align: justify;
-// }
-// .card-body > ol > li {
-//   margin-left: 10px;
-// }
-
-// #accordionb > li {
-//   padding: 15px 5px;
-// }
-// #tresb > ol,
-// #cuab > ol {
-//   padding: 0px 0px 0px 5px;
-// }
-// #tresb > ol > li {
-//   padding-bottom: 10px;
-// }
-// #unobsu,
-// #unobsub {
-//   padding: 10px;
-// }
-// #lista > li {
-//   padding-bottom: 10px;
-// }
-</style>

@@ -92,12 +92,4 @@ export default {
 
 }
 </script>
-<style lang="scss" scoped>
-// .card{
-//   background-color:#03394a;
-// }
-
-</style>
-
-
 

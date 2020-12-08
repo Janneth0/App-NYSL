@@ -15,8 +15,6 @@
 </template>
 
 <script>
-// @ is an alias to /src
-
 import MapaModal from "@/components/MapaModal.vue";
 export default {
   name: "Location",
@@ -26,8 +24,6 @@ export default {
   data: function () {
     return {
       location: [],
-      // landscape:window.matchMedia('(min-width:600px)').matches
-      
     };
   },
   methods: {
@@ -42,12 +38,11 @@ export default {
         return 0;
       }
       this.location = json.Location;
-      console.log(this.location); //SI muestra todos los datos del JSON
+      console.log(this.location);
     },
   },
   beforeMount() {
     this.getData("datanysl.json");
-    // window.addEventListener('resize',()=>window.matchMedia('(min-width:600px)').matches)
   },
 
 };

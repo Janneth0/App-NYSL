@@ -15,32 +15,26 @@
         ></router-link>
       </template>
     </td>
-    <!-- Verificar  -->
-    <div class="none-m datos">
-      <p class="col-12 none-m">
+    <div class="none-m datos row">
+      <p class="col-9 none-m">
         Date: {{ day }}/{{ month }} at
         {{ time }}
       </p>
-      <p class="col-12 none-m">Location: {{ location }}</p>
-      <p class="none-m">
-   
+      <p class="col-3 none-m btn-chat">
         <template v-if="user == null">
-          no hay usuario
-        <router-link to="/user" ><b-icon-chat-dots-fill></b-icon-chat-dots-fill  ></router-link>
-      </template>
-      <template v-else>
-        <router-link v-bind:to="'/chatroom/' + ide" class="none-m"> <b-icon-chat-dots-fill></b-icon-chat-dots-fill></router-link>
-      </template>
+          <router-link to="/user"
+            ><b-icon-chat-dots-fill></b-icon-chat-dots-fill
+          ></router-link>
+        </template>
+        <template v-else>
+          <router-link v-bind:to="'/chatroom/' + ide" class="none-m">
+            <b-icon-chat-dots-fill></b-icon-chat-dots-fill
+          ></router-link>
+        </template>
       </p>
+      <p class="col-9 none-m">Location: {{ location }}</p>
     </div>
-    <!-- {{tabla}} -->
   </tr>
-
-  <!-- <div class="none-p">
-    
-     -->
-
-  <!-- </div> -->
 </template>
 
 <script>
@@ -49,20 +43,27 @@ export default {
   name: "i-time",
   props: ["ide", "location", "day", "month", "time"],
   computed: {
-    ...mapState(["datanysl","user"]),
+    ...mapState(["datanysl", "user"]),
   },
 };
 </script>
 
 <style scoped  lang="scss">
 .datos {
-  // background-color: aqua;
-  width: 63vw;
-  // text-align: center;
-  //  padding: 0;
-  margin-top: 10px !important;
+  background-color: #a4ff4ab2;
+  width: 60vw;
+  border-radius: 10px;
+  padding: 7px 20px;
+  margin: 5px -2rem 5px 10px;
   p {
     margin-bottom: -5px !important;
+    font-size: 1.2rem;
   }
+  .btn-chat {
+    float: right;
+    margin: 0px;
+    font-size: 2rem;
+  }
+
 }
 </style>

@@ -1,13 +1,12 @@
 <template>
   <div class="rules">
-   <RulesComp msg="Rules-FORM"/><!--lUEGO VER COMO CAMBIARLO POR TITLE-->
+   <RulesComp msg="Rules-FORM"/>
    
   </div>
   
 </template>
 
 <script>
-// @ is an alias to /src
 import RulesComp from '@/components/RulesComp.vue'
 
 export default {

@@ -7,11 +7,7 @@
           <h3 sm="7">{{user.displayName}}</h3>
           <h4 sm="12">{{user.email}}</h4>  
       </b-col>
-     
     </b-row>
-    
-
-   
   </div>
 </template>
 
